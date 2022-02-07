@@ -1,23 +1,17 @@
+<script setup>
+   defineProps({
+      menu: Array
+   })
+</script>
+
 <template>
     <header id="header">
       <div class="container">
          <div class="menu-social">
             <nav class="menu">
                <ul>
-                  <li>
-                     <a href="#home">Home</a>
-                  </li>
-                  <li>
-                     <a href="#home">product</a>
-                  </li>
-                  <li>
-                     <a href="#home">pricing</a>
-                  </li>
-                  <li>
-                     <a href="#home">About</a>
-                  </li>
-                  <li>
-                     <a href="#contact">Contact</a>
+                  <li v-for="(menuItem, key) in menu">
+                     <a :href="menuItem.link">{{ menuItem.label }}</a>
                   </li>
                </ul>
             </nav>

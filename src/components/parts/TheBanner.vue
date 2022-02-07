@@ -1,7 +1,7 @@
 <template>
     <section id="baneer">
       <div class="logo">
-         <img src="./images/logo.svg" alt="">
+         <img src="@/assets/images/logo.svg" alt="">
       </div>
       <div class="title-baneer">
          <h2>The best products<br> start with Figma</h2>

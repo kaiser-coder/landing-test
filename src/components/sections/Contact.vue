@@ -8,7 +8,11 @@
          <div class="contact-container">
             <div class="formulaire">
                <form action="">
-                  <h4></h4>
+                  <h4>Contact Us</h4>
+                  <input type="text" class="input-text" placeholder="Your Name">
+                  <input type="text" class="input-text" placeholder="Your Email">
+                  <textarea type="text" class="input-text" placeholder="Your Message"></textarea>
+                  <button type="submit" class="button-primary">Send</button>
                </form>
             </div>
          </div>

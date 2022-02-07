@@ -4,7 +4,7 @@
       <h3>Testimonials</h3>
     </div>
     <div class="testimonial-content">
-      <img src="@/assets/images/ibm.svg" alt="" />
+      <img :src="'src/assets/images/ibm.svg'" alt="" />
       <p>
         Most calendars are designed for teams. Slate is designed for freelancers
         who want a simple way to plan their schedule.

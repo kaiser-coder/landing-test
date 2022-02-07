@@ -13,7 +13,7 @@ import Playlogo from "@/assets/svg/Playlogo.svg";
       </div>
       <div class="feature-item">
         <div class="item">
-          <img src="@/assets/images/fonts.svg" alt="" />
+          <img :src="'src/assets/images/fonts.svg'" alt="" />
           <h4>OpenType features Variable fonts</h4>
           <p>
             Slate helps you see how many more days you need to work to reach
@@ -21,7 +21,7 @@ import Playlogo from "@/assets/svg/Playlogo.svg";
           </p>
         </div>
         <div class="item">
-          <img src="@/assets/images/design.svg" alt="" />
+          <img :src="'src/assets/images/design.svg'" alt="" />
           <h4>Design with real data</h4>
           <p>
             Slate helps you see how many more days you need to work to reach
@@ -29,7 +29,7 @@ import Playlogo from "@/assets/svg/Playlogo.svg";
           </p>
         </div>
         <div class="item">
-          <img src="@/assets/images/action.svg" alt="" />
+          <img :src="'src/assets/images/action.svg'" alt="" />
           <h4>Fastest way to take action</h4>
           <p>
             Slate helps you see how many more days you need to work to reach
@@ -39,7 +39,7 @@ import Playlogo from "@/assets/svg/Playlogo.svg";
       </div>
       <div class="video">
         <div class="image-back">
-          <img src="@/assets/images/back-video.png" alt="" />
+          <img :src="'src/assets/images/back-video.png'" alt="" />
         </div>
         <div class="play-video">
           <button id="play">

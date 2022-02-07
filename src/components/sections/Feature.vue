@@ -1,6 +1,7 @@
 <script setup>
-import Playlogo from "@/assets/svg/Playlogo.svg";
+  import Playlogo from "@/assets/svg/Playlogo.svg";
 </script>
+
 <template>
   <section id="feature">
     <div class="container">

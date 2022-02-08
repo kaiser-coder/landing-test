@@ -1,5 +1,21 @@
 <script setup>
-  import Playlogo from "@/assets/svg/Playlogo.svg";
+import Playlogo from "@/assets/svg/Playlogo.svg";
+import { onMounted } from "vue";
+import $ from "jquery";
+
+onMounted(() => {
+  $("#play").on("click", function () {
+    let video = $(this).parents(".video").find("video.video-play").get(0);
+    if (video.paused) {
+      $(this).parents(".video").find(".image-back").css("opacity", "0");
+      $(this).css("opacity", "0");
+      video.play();
+    } else {
+      $(this).css("opacity", "1");
+      video.pause();
+    }
+  });
+});
 </script>
 
 <template>

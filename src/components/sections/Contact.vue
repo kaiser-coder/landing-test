@@ -1,3 +1,32 @@
+<script setup>
+    import {ref, reactive} from 'vue'
+
+    const ready = ref(false)
+    const fallbackProcedure = ref("gps")
+    const zoom = ref(17)
+    const geolocation = reactive({
+      lat: 31.73858,
+      lng: -35.98628,
+      zoom: 2,
+    })
+    const address = reactive({
+      query: "Albania, Tirane",
+      zoom: 10,
+    })
+    const manually = reactive({
+      address_description: "21 Dhjetori, Tirana, Albania",
+      city: "Tirana",
+      country: "Albania",
+      lat: 41.3267905,
+      lng: 19.8060475,
+      state: "Tirana County",
+      zip_code: "",
+      zoom: 17,
+    })
+    const place = ref({})
+</script>
+
+
 <template>
   <section id="contact">
     <div class="title-section">
@@ -41,7 +70,20 @@
         </div>
 
         <div class="map">
-          <img src="@/assets/images/@ map screen.png" />
+          <PlaceSearch
+            v-show="ready"
+            v-bind:ready="ready"
+            placeholder="Enter a location"
+            loading="Map is loading"
+            v-bind:fallbackProcedure="fallbackProcedure"
+            v-bind:zoom="zoom"
+            v-bind:geolocation="geolocation"
+            v-bind:gps_timeout="3000"
+            v-bind:address="address"
+            @changed="getMapData"
+          >
+          </PlaceSearch>
+          <img v-show="!ready" src="@/assets/images/@ map screen.png" />
         </div>
 
         <div class="socials">

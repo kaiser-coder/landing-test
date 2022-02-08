@@ -2,10 +2,24 @@
    import FacebookIcon from '@/assets/svg/FacebookIcon.svg'
    import TwitterIcon from '@/assets/svg/TwitterIcon.svg'
    import LinkedInIcon from '@/assets/svg/LinkedInIcon.svg'
+   import { onMounted } from "vue";
 
+   import $ from 'jquery'
    defineProps({
       menu: Array
-   })
+   });   
+
+   onMounted(() => {
+      $('#show-menu-mobile').on('click', function(){
+         $(this).toggleClass('show'); 
+         $('#header').toggleClass('show');
+         if($(this).hasClass('show')){
+            $('body').css('overflow','hidden')
+         }else{
+            $('body').css('overflow','auto')
+         }
+      })
+   });
 </script>
 
 <template>
@@ -43,7 +57,7 @@
          </div>
       </div>
    </header>
-   <div class="navigation-menu">
+   <div id="show-menu-mobile" class="navigation-menu">
       <div class="bar"></div>
       <div class="bar"></div>
       <div class="bar"></div>
@@ -63,9 +77,27 @@
     @media(max-width:769px){
        display: flex;
     }
+    &.show{
+       .bar{
+          &:nth-child(1){
+            width: 50px;
+           transform: rotate(45deg) ;
+
+         }
+         &:nth-child(2){
+            opacity: 0;
+         }
+         &:nth-child(3){
+            width: 50px;
+                transform: rotate(-45deg) translate3d(25px, -24px, 36px);
+         }
+       }
+
+    }
    .bar{
       height: 4px;
       background-color: #fff;
+      transition: .3s ease-in-out;
       &:nth-child(1){
          width: 20px;
       }

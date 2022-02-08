@@ -5,6 +5,11 @@ header{
    left: 0;
    margin: auto;
    width: 100%;
+   &.show{
+      @media(max-width:769px){
+         display: flex;
+      }
+   }
    .menu-social{
       display: flex;
       align-items: center;

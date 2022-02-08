@@ -54,22 +54,3 @@
       </div>
    </section>
 </template>
-
-<style scoped lang="scss">
-   .infos  {
-      color: #374754;
-      font-family: 'Graphik-Regular';
-      font-style: normal;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 23px;
-   }
-
-   .text-center {
-      text-align: center
-   }
-
-   .socials svg{
-      padding: 32px;
-   }
-</style>

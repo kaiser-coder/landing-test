@@ -1,9 +1,23 @@
 footer{
    background: $titleSection;
    padding: 150px 0;
+   @media(max-width:769px){
+      padding: 60px 0;
+   }
    .footer-container, .menus-footer{
       display: flex;
       width: 100%;
+      
+   }
+   .footer-container{
+      @media(max-width:992px){
+         flex-direction: column;
+      }
+   }
+   .menus-footer{
+      @media(max-width:769px){
+         flex-direction: column;
+      }
    }
    .footer-container{
       justify-content: space-between;
@@ -19,6 +33,14 @@ footer{
    }
    .item{
       width: 30%;
+      @media(max-width:992px){
+         width: 40%;
+      }
+      @media(max-width:769px){
+         width: 100%;
+         text-align: center;
+         margin-bottom: 50px;
+      }
       a{
          margin-bottom: 16px;
          display: inline-block;
@@ -27,11 +49,24 @@ footer{
   
   .contact{
      width: 35%;
+     @media(max-width:992px){
+        width: 80%;
+        margin-top: 50px;
+     }
+     @media(max-width:769px){
+         width: 80%;
+         margin: auto;
+      }
    .social{
       li{
          display: inline-block;
          margin-right: 30px;
          margin-top: 20px;
+      }
+      ul{
+         @media(max-width:769px){
+            text-align: center;
+         }
       }
    }
      li{

@@ -1,7 +1,10 @@
+<script setup>
+   import Logo from '@/assets/images/logo.svg'
+</script>
 <template>
     <section id="baneer">
       <div class="logo">
-         <img src="@/assets/images/logo.svg" alt="">
+         <Logo/>
       </div>
       <div class="title-baneer">
          <h2>The best products<br> start with Figma</h2>

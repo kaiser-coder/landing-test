@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
 .container{
-   width: 100%;
-   padding-right: var(--bs-gutter-x,.75rem);
-   padding-left: var(--bs-gutter-x,.75rem);
+   width: 95%;  
    margin-right: auto;
    margin-left: auto;
    @media(min-width: $mobile){
@@ -74,7 +72,6 @@ body{
       max-width: 95%;
       margin: auto;
       text-align: center;
-      margin-bottom: 80px;
    }
    h3{
       font-family: 'Graphik-Regular';

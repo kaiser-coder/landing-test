@@ -9,6 +9,9 @@
    justify-content: space-between;
    padding: 45px 0;
    background-position: 50% 100%;
+   @media(max-width:769px){
+      min-height: calc(100vh - 97px);
+   }
    .logo{
       svg{
          width: 186px;
@@ -30,6 +33,10 @@
       text-align: center;
       font-family: 'Graphik-Bold';
       margin-bottom: 27px;
+      @media(max-width:769px){
+         font-size: 30px;
+         line-height: 39px;
+      }
    }
    p{
       color: $lightText;
@@ -150,6 +157,9 @@
    @media(max-width:769px){
       margin: 50px 0;
    }
+   .title-section{
+      margin-bottom: 80px;
+   }
    .organisation-content{
       display: flex;
       align-items: center;
@@ -168,9 +178,15 @@
          @media(max-width:769px){
             width: 100%;
          }
+         @media(max-width:769px){
+            text-align: center;
+         }
          img{
             width: 100%;
             height: auto;
+            @media(max-width:769px){
+               width: 80%;
+            }
          }
       }
       .title-section{
@@ -197,14 +213,22 @@
       justify-content: space-between;
       @media(max-width:769px){
          flex-direction: column-reverse;
+         width: 90%;
+         align-items: center;
+         justify-content: center;
+         margin: auto;
       }
       .image{
          @media(max-width:769px){
             margin-top: 60px;
+            text-align: center;
          }
       }
       img{
          width: 100%;
+         @media(max-width:769px){
+            width: 80%;
+         }
       }
    }
    h4{
@@ -262,6 +286,9 @@
 }
 #partner{
    margin: 180px 0;
+   @media(max-width:769px){
+      margin: 80px 15px;
+   }
    .partners-list{
       display: flex;
       flex-wrap: wrap;
@@ -381,6 +408,9 @@
 #pricing{
    background: $titleSection;
    padding: 140px 0;
+   @media(max-width:769px){
+      padding: 86px 0;
+   }
    .title-section{
       h3, p{
          color: #fff;
@@ -492,6 +522,16 @@
 #contact{
    margin-top: 180px;
    margin-bottom: 102px;
+   @media(max-width:769px){
+      margin-top: 86px;
+      margin-bottom: 86px;
+   }
+   .title-section{
+      margin-bottom: 50px;
+   }
+   .text-center{
+      text-align: left;
+   }
    h4{
       font-size: 20px;
       line-height: 28px;
@@ -523,9 +563,18 @@
       display: flex;
       text-align: center;
       align-items: center;
+      & > div{
+         text-align: center;
+         margin: 0 10px;
+         @media(max-width: 769px) {
+            display: flex;
+            align-items: center;
+            text-align: left;
+         }
+      }
 
       @media(max-width: 769px) {
-         width: 61%;
+         width: 90%;
          align-self: center;
          flex-direction: column;
          align-items: flex-start;
@@ -541,12 +590,15 @@
 
          .address, .phone, .mail {
             margin-bottom: 32px;
+            @media(max-width: 769px){
+               margin-bottom: 0;
+            }
          }
       }
    }
 
    .socials svg{
-      padding: 32px;
+      padding: 0 16px;
    }
 
    .container {
@@ -555,6 +607,7 @@
 
      @media(max-width: 769px) {
          flex-direction: column-reverse;
+         align-items: center;
      }
 
      .contact-container {
@@ -580,8 +633,7 @@
          .phone {
             width: 40%;
             
-            @media(max-width: 769px) {
-               margin-bottom: 32px;
+            @media(max-width: 769px) {               
                width: auto;
             } 
          }

@@ -520,6 +520,11 @@
       font-weight: normal;
       font-size: 16px;
       line-height: 23px;
+
+      @media(max-width: 769px) {
+         width: 72%;
+         align-self: center;
+      }
    }
 
    .socials svg{
@@ -562,21 +567,36 @@
             @media(max-width: 769px) {
                flex-direction: column;
                align-items: flex-start;
-
+               
                img, p {
                   display: inline;
+                  vertical-align: middle;
+               }
+
+               img {
+                  margin-right: 20px;
+               }
+
+               .address, .phone, .mail {
+                  margin-bottom: 32px;
                }
             }
          } 
 
          .phone {
             width: 40%;
+            
+            @media(max-width: 769px) {
+               margin-bottom: 32px;
+               width: auto;
+            } 
          }
 
          .map {
             text-align: center;
             margin-top: 80px;
             margin-bottom: 74px;
+
 
             @media(max-width: 769px) {
                display: none;

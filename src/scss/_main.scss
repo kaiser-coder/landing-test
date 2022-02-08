@@ -10,8 +10,16 @@
    padding: 45px 0;
    background-position: 50% 100%;
    .logo{
-      img{
+      svg{
          width: 186px;
+      }
+      @media(max-width:1200px){
+         margin-top: 70px;
+      }
+      @media(max-width:769px){
+         margin-top: 0px;
+         margin-left: 15px;
+         align-self: baseline;
       }
    }
    h2{
@@ -38,14 +46,27 @@
       align-items: center;
       max-width: 826px;
       margin-bottom: 185px;
+      @media(max-width: 769px){
+         max-width: 90%;
+         margin: auto;
+      }
    }
 }
 #feature{
    margin-top: 115px;
+   .container{
+      @media(max-width:769px){
+         display: flex;
+         flex-direction: column;
+      }
+   }
    .item{
       text-align: center;
       max-width: 255px;
       margin: 0 24px;
+      @media(max-width:769px){
+         margin-bottom: 80px;
+      }
       img{
          width: 46px;
       }
@@ -72,12 +93,21 @@
       justify-content: center;
       margin-top: 80px;
       margin-bottom: 132px;
+      @media(max-width:769px){
+         flex-direction: column;
+         align-items: center;
+         margin-bottom: 0;
+      }
    }
    .video{
       position: relative;
       filter: drop-shadow(0px 8.14769px 63.1446px rgba(0, 0, 0, 0.3));
       border-radius: 44.8123px;
       overflow: hidden;
+      @media(max-width:769px){
+         order: 2;
+         margin-top: 50px;
+      }
    }
    .play-video{
       position: absolute;
@@ -109,19 +139,35 @@
       height: 725px;
       width: 100%;
       object-fit: cover;
+      @media(max-width:1400px){
+         height: auto;
+      }
+      
    }
 }
 #organisation{
    margin: 278px 0;
+   @media(max-width:769px){
+      margin: 50px 0;
+   }
    .organisation-content{
       display: flex;
       align-items: center;
       width: 100%;
+      @media(max-width:769px){
+         flex-direction: column;
+      }
       .description{
          width: 50%;
+         @media(max-width:769px){
+            width: 100%;
+         }
       }
       .image{
          width: 50%;
+         @media(max-width:769px){
+            width: 100%;
+         }
          img{
             width: 100%;
             height: auto;
@@ -130,10 +176,16 @@
       .title-section{
          h3{
             text-align: left;
+            @media(max-width:769px){
+               text-align: center;
+            }
          }
          p{
             text-align: left;
             margin-bottom: 70px;
+            @media(max-width:769px){
+               text-align: center;
+            }
          }
          
       }
@@ -143,6 +195,17 @@
    .newsletter-content{
       display: flex;
       justify-content: space-between;
+      @media(max-width:769px){
+         flex-direction: column-reverse;
+      }
+      .image{
+         @media(max-width:769px){
+            margin-top: 60px;
+         }
+      }
+      img{
+         width: 100%;
+      }
    }
    h4{
       font-size: 20px;
@@ -163,6 +226,11 @@
       font-weight: normal;
       margin-bottom: 35px;
       margin-top: 0;
+      br{
+         @media(max-width: 769px){
+            display: none;
+         }
+      }
    }
    .action-content{
       h4{
@@ -179,6 +247,16 @@
       }
       input[type="text"]{
          margin-right: 12px;
+         @media(max-width:769px){
+            width: 100%;
+            margin-bottom: 15px;
+         }
+      }
+      button{
+         @media(max-width:769px){
+            width: 100%;
+            margin-bottom: 15px;
+         }
       }
    }
 }
@@ -188,6 +266,9 @@
       display: flex;
       flex-wrap: wrap;
       margin-top: 80px;
+      @media(max-width:769px){
+         flex-direction: column;
+      }
    }
    .item{
       padding: 30px 0px;
@@ -196,6 +277,16 @@
       text-align: center;
       display: flex;
       flex-direction: column;
+      @media(max-width:1400px){
+         width: 33%;
+      }
+      @media(max-width:992px){
+         width: 49%;
+      }
+      @media(max-width:769px){
+         width: 80%;
+         margin: 15px auto;
+      }
       div{
          padding: 0 40px;
       }
@@ -225,6 +316,11 @@
    margin-bottom: 100px;
    .testimonial-content{
       text-align: center;
+      @media(max-width:992px){
+         width: 95%;
+         max-width: 95%;
+         margin: auto;
+      }
       img{
          width: 150px;
          height: auto;
@@ -295,6 +391,9 @@
       align-items: center;
       justify-content: space-between;
       margin-top: 80px;
+      @media(max-width:992px){
+         flex-direction: column;
+      }
    }
    .item{
       padding: 43px 40px;
@@ -303,7 +402,10 @@
       border-radius: 10px;
       text-align: center;
       width: 30%;
-      
+      @media(max-width:992px){
+         width:80%;
+         margin-bottom: 50px;
+      }
       &.white-template{
          background: $lightText;
          color: $titleSection;         
@@ -319,7 +421,9 @@
          background: $colorPrimary;
          color: $lightText;
          padding: 95px 40px;
-
+         @media(max-width:992px){
+            padding: 43px 40px
+         }
          h4, p, span, .curr, .recursive{
             color: $lightText;
          } 

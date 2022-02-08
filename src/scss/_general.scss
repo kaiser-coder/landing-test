@@ -70,6 +70,12 @@ body{
 .title-section{
    max-width: 560px;
    margin: auto;
+   @media(max-width:769px){
+      max-width: 95%;
+      margin: auto;
+      text-align: center;
+      margin-bottom: 80px;
+   }
    h3{
       font-family: 'Graphik-Regular';
       font-size: 48px;
@@ -114,4 +120,20 @@ textarea {
    line-height: 16px;
    letter-spacing: .1px;
    color: #18171d;
+}
+.infos  {
+   color: #374754;
+   font-family: 'Graphik-Regular';
+   font-style: normal;
+   font-weight: normal;
+   font-size: 16px;
+   line-height: 23px;
+}
+
+.text-center {
+   text-align: center
+}
+
+.socials svg{
+   padding: 32px;
 }

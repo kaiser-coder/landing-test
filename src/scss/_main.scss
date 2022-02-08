@@ -539,7 +539,8 @@
          margin-right: 60px;
 
          @media(max-width: 769px) {
-            width: 98%;
+            width: 95%;
+            margin-right: 0;
          }
      }
 
@@ -585,6 +586,7 @@
          @media(max-width: 769px) {
             .socials {
                align-self: center;
+               margin-bottom: 90px;
             }
          }
      }

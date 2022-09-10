@@ -1,0 +1,18 @@
+version: "3.2"
+
+services:
+  web:
+    container_name: "landing_test_vue"
+    build: ./
+    ports:
+      - 3000:3000
+    volumes:
+      - type: bind
+        source: ./
+        target: /app
+      - type: volume
+        source: packages
+        target: /app/node_modules
+
+volumes:
+  packages:
